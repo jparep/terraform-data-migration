@@ -1,6 +1,6 @@
-# 📌 Vital Health Database Migration to AWS S3 Using Terraform
+# Vital Health Database Migration to AWS S3 Using Terraform
 
-## 🚀 Overview
+## Overview
 This project **automates** the migration of **on-premise PostgreSQL (`vital_health_db`)** to **AWS S3** using **Terraform**. The data is extracted using **AWS Database Migration Service (DMS)**, transformed to **Parquet format using AWS Glue**, and stored in **Snowflake for analytics**.
 
 This setup ensures:
@@ -11,7 +11,7 @@ This setup ensures:
 
 ---
 
-# 📂 Project File Structure: Vital Health Data Migration to AWS
+# Project File Structure: Vital Health Data Migration to AWS
 
 This file structure represents the **Terraform-based AWS infrastructure** for migrating **on-premise PostgreSQL** (`vital_health_db`) to **AWS S3**, processing it with **AWS Glue**, and integrating it with **Snowflake for analytics**.
 
@@ -37,7 +37,7 @@ vital_health_migration/
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 Before deploying, ensure you have:
 - **Terraform v1.4+** installed → [Download Terraform](https://www.terraform.io/downloads)
 - **AWS CLI** configured → `aws configure`
@@ -46,7 +46,7 @@ Before deploying, ensure you have:
 
 ---
 
-## 📌 1️⃣ Setup & Configuration
+## Setup & Configuration
 
 ### **1. Clone the Repository**
 ```sh
