@@ -53,3 +53,20 @@ Before deploying, ensure you have:
 git clone https://github.com/jparep/terraform-data-migration.git
 cd vital_health_migration
 
+
+###  Deployment Steps
+
+1. **Initialize Terraform**
+    ```sh
+    terraform init
+    ```
+
+2. **Plan Deployment**
+    ```sh
+    terraform plan
+    ```
+
+3. **Apply Terraform**
+    ```sh
+    terraform apply -auto-approve
+    ```
