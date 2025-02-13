@@ -33,7 +33,7 @@ vital_health_migration/
 │   ├── lambda_function.py          # Python script for AWS Lambda (Triggers Glue jobs)
 │── .gitignore                      # Ignore Terraform state files & AWS credentials
 │── README.md                       # Documentation for deployment steps
-
+```
 
 ---
 
