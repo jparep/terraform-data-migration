@@ -70,3 +70,14 @@ cd vital_health_migration
     ```sh
     terraform apply -auto-approve
     ```
+
+#### cAutomating Data Processing
+Trigger AWS Glue Job
+
+aws glue start-job-run --job-name convert_to_parquet
+
+#### Clean Up Resources
+
+To destroy all AWS resources, run:
+
+terraform destroy -auto-approve
