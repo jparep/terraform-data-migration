@@ -52,7 +52,7 @@ Before deploying, ensure you have:
 ```sh
 git clone https://github.com/jparep/terraform-data-migration.git
 cd vital_health_migration
-
+```
 
 ###  Deployment Steps
 
