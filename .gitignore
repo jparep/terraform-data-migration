@@ -1,0 +1,37 @@
+# Ignore Terraform state files (contains sensitive AWS resources & secrets)
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/crash.log
+terraform/*.tfplan
+
+# Ignore AWS Credentials (Never store AWS credentials in Git)
+.aws/
+.env
+*.pem
+*.key
+
+# Ignore Python Bytecode & Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore AWS Glue Scripts Cache
+glue-scripts/.ipynb_checkpoints/
+
+# Ignore AWS Lambda Deployment Files
+lambda/lambda_function.zip
+lambda/__pycache__/
+
+# Ignore Logs
+logs/
+*.log
+debug.log
+
+# Ignore Local Configurations & IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
