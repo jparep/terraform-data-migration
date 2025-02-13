@@ -12,3 +12,23 @@ This setup ensures:
 ---
 
 ## 📂 Project Structure
+
+
+---
+
+## 🛠️ Prerequisites
+Before deploying, ensure you have:
+- **Terraform v1.4+** installed → [Download Terraform](https://www.terraform.io/downloads)
+- **AWS CLI** configured → `aws configure`
+- **Access to AWS S3, DMS, Glue, Lambda, and IAM**
+- **An existing on-prem PostgreSQL database**
+
+---
+
+## 📌 1️⃣ Setup & Configuration
+
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/jparep/terraform-data-migration.git
+cd vital_health_migration
+
