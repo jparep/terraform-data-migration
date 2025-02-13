@@ -11,25 +11,28 @@ This setup ensures:
 
 ---
 
-## 📂 Project Structure
+# 📂 Project File Structure: Vital Health Data Migration to AWS
 
+This file structure represents the **Terraform-based AWS infrastructure** for migrating **on-premise PostgreSQL** (`vital_health_db`) to **AWS S3**, processing it with **AWS Glue**, and integrating it with **Snowflake for analytics**.
+
+```bash
 vital_health_migration/
-│── terraform/
-│   ├── main.tf                # Terraform main infrastructure setup
-│   ├── variables.tf            # User-defined variables for easy configuration
-│   ├── outputs.tf              # Outputs for AWS resources
-│   ├── provider.tf             # AWS provider configuration
-│   ├── dms.tf                  # AWS DMS configuration (Database Migration Service)
-│   ├── glue.tf                 # AWS Glue job setup (ETL for Parquet)
-│   ├── lambda.tf               # AWS Lambda function for automation
-│   ├── s3.tf                   # AWS S3 bucket for storing exported data
-│   ├── eventbridge.tf           # AWS EventBridge setup for scheduling jobs
-│── glue-scripts/
-│   ├── convert_to_parquet.py    # Python script for AWS Glue (CSV to Parquet)
-│── lambda/
-│   ├── lambda_function.py       # Python script for AWS Lambda (Triggers Glue jobs)
-│── .gitignore                   # Ignore Terraform state files & AWS credentials
-│── README.md                    # Documentation for deployment steps
+│── terraform/                   # Terraform configuration directory
+│   ├── main.tf                   # Terraform main infrastructure setup
+│   ├── variables.tf               # User-defined variables for easy configuration
+│   ├── outputs.tf                 # Outputs for AWS resources
+│   ├── provider.tf                # AWS provider configuration
+│   ├── dms.tf                     # AWS DMS configuration (Database Migration Service)
+│   ├── glue.tf                    # AWS Glue job setup (ETL for Parquet)
+│   ├── lambda.tf                  # AWS Lambda function for automation
+│   ├── s3.tf                      # AWS S3 bucket for storing exported data
+│   ├── eventbridge.tf             # AWS EventBridge setup for scheduling jobs
+│── glue-scripts/                  # AWS Glue ETL scripts directory
+│   ├── convert_to_parquet.py       # Python script for AWS Glue (CSV to Parquet)
+│── lambda/                         # AWS Lambda functions directory
+│   ├── lambda_function.py          # Python script for AWS Lambda (Triggers Glue jobs)
+│── .gitignore                      # Ignore Terraform state files & AWS credentials
+│── README.md                       # Documentation for deployment steps
 
 
 ---
