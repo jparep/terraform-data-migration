@@ -33,3 +33,12 @@ resource "aws_dms_replication_task" "dms_task" {
   target_endpoint_arn   = aws_dms_endpoint.s3_target.endpoint_arn
   replication_instance_arn = aws_dms_replication_instance.dms_instance.replication_instance_arn
 }
+
+
+# Placeholder for AWS DMS (Database Migration Service) configuration
+resource "aws_dms_replication_instance" "dms_instance" {
+  replication_instance_class = "dms.t2.micro"
+  allocated_storage         = 20
+  apply_immediately         = true
+  # Add additional DMS configurations as needed
+}
