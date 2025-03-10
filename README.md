@@ -17,22 +17,28 @@ This file structure represents the **Terraform-based AWS infrastructure** for mi
 
 ```bash
 vital_health_migration/
-│── terraform/                   # Terraform configuration directory
-│   ├── main.tf                   # Terraform main infrastructure setup
-│   ├── variables.tf               # User-defined variables for easy configuration
-│   ├── outputs.tf                 # Outputs for AWS resources
-│   ├── provider.tf                # AWS provider configuration
-│   ├── dms.tf                     # AWS DMS configuration (Database Migration Service)
-│   ├── glue.tf                    # AWS Glue job setup (ETL for Parquet)
-│   ├── lambda.tf                  # AWS Lambda function for automation
-│   ├── s3.tf                      # AWS S3 bucket for storing exported data
-│   ├── eventbridge.tf             # AWS EventBridge setup for scheduling jobs
-│── glue-scripts/                  # AWS Glue ETL scripts directory
-│   ├── convert_to_parquet.py       # Python script for AWS Glue (CSV to Parquet)
-│── lambda/                         # AWS Lambda functions directory
-│   ├── lambda_function.py          # Python script for AWS Lambda (Triggers Glue jobs)
-│── .gitignore                      # Ignore Terraform state files & AWS credentials
-│── README.md                       # Documentation for deployment steps
+├── terraform/                    # Terraform configuration files
+│   ├── main.tf                   # Core infrastructure definitions
+│   ├── variables.tf              # Configurable variables with validation
+│   ├── outputs.tf                # Resource outputs (e.g., S3 bucket ARN)
+│   ├── provider.tf               # AWS provider and backend configuration
+│   ├── modules/                  # Modularized Terraform configurations
+│   │   ├── dms/                  # DMS module (source → target)
+│   │   ├── glue/                 # Glue ETL module
+│   │   ├── lambda/               # Lambda automation module
+│   │   ├── s3/                   # S3 storage module
+│   │   └── eventbridge/          # Scheduling module
+│   ├── iam.tf                    # IAM roles and policies (Added)
+│   └── snowflake.tf              # Snowflake integration (Added)
+├── glue-scripts/                 # AWS Glue ETL scripts
+│   └── convert_to_parquet.py     # Python script for CSV → Parquet conversion
+├── lambda/                       # AWS Lambda functions
+│   └── trigger_glue_job.py       # Renamed for clarity: Triggers Glue jobs
+├── tests/                        # Added: Integration tests directory
+│   └── test_deployment.tf        # Terraform test configurations
+├── .gitignore                    # Git ignore file
+├── .terraform.lock.hcl           # Added: Dependency lock file
+└── README.md                     # Enhanced deployment documentation
 ```
 
 ---
