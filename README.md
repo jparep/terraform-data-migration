@@ -87,3 +87,5 @@ aws glue start-job-run --job-name convert_to_parquet
 To destroy all AWS resources, run:
 
 terraform destroy -auto-approve
+
+### License
